@@ -34,7 +34,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import net.ljcomputing.config.PersistenceConfiguration;
 import net.ljcomputing.entity.Person;
-import net.ljcomputing.repository.PersonRepository;
 import net.ljcomputing.service.PersonService;
 
 /**
@@ -50,10 +49,6 @@ public class PersistenceTest {
 
   /** The SLF4J Logger. */
   private static final Logger LOGGER = LoggerFactory.getLogger(PersistenceTest.class);
-
-  /** The person repository. */
-  @Autowired
-  private transient PersonRepository personRepository;
   
   @Autowired
   private transient PersonService personService;
@@ -71,7 +66,7 @@ public class PersistenceTest {
     person.setName("jim");
 
     LOGGER.debug("creating person: {}", person);
-    personService.create(person);
+    personService.createOrUpdate(person);
 
     validatePerson(person);
 
@@ -79,7 +74,7 @@ public class PersistenceTest {
       LOGGER.debug("-- person {}", p);
       p.setName("JOE");
       LOGGER.debug("-- NEW person {}", p);
-      personService.update(person);
+      personService.createOrUpdate(person);
 
       validatePerson(p);
       assertEquals("name is not equal to JOE", "JOE", p.getName());

@@ -33,6 +33,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -50,11 +51,11 @@ import com.zaxxer.hikari.HikariDataSource;
  *
  */
 @Configuration
-@ComponentScan(basePackages = { "net.ljcomputing" })
 @PropertySource("classpath:datasource.properties")
+@ComponentScan(basePackages = { "net.ljcomputing" })
 @EnableAutoConfiguration
 @EnableAspectJAutoProxy
-@EnableJpaRepositories("net.ljcomputing.repository")
+@EnableJpaRepositories(basePackages = { "net.ljcomputing.repository" })
 @EntityScan({ "net.ljcomputing.entity" })
 @EnableTransactionManagement
 @SuppressWarnings("PMD.AtLeastOneConstructor")
@@ -64,25 +65,59 @@ public class PersistenceConfiguration {
   private static final Logger LOGGER = LoggerFactory.getLogger(PersistenceConfiguration.class);
 
   /** The url. */
-  @Value("${dataSource.url}")
+  @Value("${datasource.url}")
   private transient String url;
 
   /** The username. */
-  @Value("${dataSource.username}")
+  @Value("${datasource.username}")
   private transient String username;
 
   /** The password. */
-  @Value("${dataSource.password}")
+  @Value("${datasource.password}")
   private transient String password;
+
+  /** The pool name. */
+  @Value("${datasource.poolName}")
+  private transient String poolName;
+
+  /** The connection timeout. */
+  @Value("${datasource.connectionTimeout}")
+  private transient int connectionTimeout;
+
+  /** The max lifetime. */
+  @Value("${datasource.maxLifetime}")
+  private transient int maxLifetime;
+
+  /** The maximum pool size. */
+  @Value("${datasource.maximumPoolSize}")
+  private transient int maximumPoolSize;
+
+  /** The minimum idle. */
+  @Value("${datasource.minimumIdle}")
+  private transient int minimumIdle;
+
+  /** The idle timeout. */
+  @Value("${datasource.idleTimeout}")
+  private transient int idleTimeout;
+
+  /**
+   * Property sources placeholder configurer.
+   *
+   * @return the property sources placeholder configurer
+   */
+  @Bean
+  public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+    return new PropertySourcesPlaceholderConfigurer();
+  }
 
   /**
    * Data source.
    *
    * @return the data source
    */
-  @Bean
+  @Bean(destroyMethod = "close")
   public DataSource dataSource() {
-    LOGGER.debug("using the following configuration: [{}] [{}] [{}]", url, username, password);
+    LOGGER.debug("using the following configuration: url:[{}] username:[{}] password:[********]", url, username);
 
     try {
       return new HikariDataSource(hikariConfig());
@@ -117,10 +152,12 @@ public class PersistenceConfiguration {
 
     initConnectionPool(hikariConfig);
 
-    hikariConfig.setMaxLifetime(60000);
-
-    hikariConfig.setMinimumIdle(2);
-    hikariConfig.setMaximumPoolSize(10);
+    hikariConfig.setPoolName(poolName);
+    hikariConfig.setMaximumPoolSize(maximumPoolSize);
+    hikariConfig.setMinimumIdle(minimumIdle);
+    hikariConfig.setMaxLifetime(maxLifetime);
+    hikariConfig.setConnectionTimeout(connectionTimeout);
+    hikariConfig.setIdleTimeout(idleTimeout);
 
     addAdditionalPoolProperties(hikariConfig);
 
@@ -146,12 +183,10 @@ public class PersistenceConfiguration {
    * @param hikariConfig the hikari config
    */
   private void addAdditionalPoolProperties(final HikariConfig hikariConfig) {
-    hikariConfig.setPoolName("hikariConnectionPool");
-
-    hikariConfig.addDataSourceProperty("dataSource.cachePrepStmts", "true");
-    hikariConfig.addDataSourceProperty("dataSource.prepStmtCacheSize", "250");
-    hikariConfig.addDataSourceProperty("dataSource.prepStmtCacheSqlLimit", "2048");
-    hikariConfig.addDataSourceProperty("dataSource.useServerPrepStmts", "true");
+    hikariConfig.addDataSourceProperty("datasource.cachePrepStmts", "true");
+    hikariConfig.addDataSourceProperty("datasource.prepStmtCacheSize", "250");
+    hikariConfig.addDataSourceProperty("datasource.prepStmtCacheSqlLimit", "2048");
+    hikariConfig.addDataSourceProperty("datasource.useServerPrepStmts", "true");
   }
 
   /**

@@ -22,9 +22,9 @@ import net.ljcomputing.entity.PersistedEntity;
 
 /**
  * Interface shared by all entity services.
- * 
- * @author James G. Willmore
  *
+ * @author James G. Willmore
+ * @param <T> the PersitedEntity type
  */
 public interface EntityService<T extends PersistedEntity> {
   
@@ -34,7 +34,7 @@ public interface EntityService<T extends PersistedEntity> {
    * @param entity the entity
    * @return the long
    */
-  T create(T entity);
+  T createOrUpdate(T entity);
   
   /**
    * Read all the entities of a given type.
@@ -50,14 +50,6 @@ public interface EntityService<T extends PersistedEntity> {
    * @return the t
    */
   T readById(Long id);
-  
-  /**
-   * Update the given entity.
-   *
-   * @param entity the entity
-   * @return TODO
-   */
-  T update(T entity);
   
   /**
    * Delete the given etity.

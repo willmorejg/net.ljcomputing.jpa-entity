@@ -37,10 +37,10 @@ public abstract class AbstractEntityService<T extends PersistedEntity, R extends
   protected R repository;
 
   /**
-   * @see net.ljcomputing.service.EntityService#create(net.ljcomputing.entity.PersistedEntity)
+   * @see net.ljcomputing.service.EntityService#createOrUpdate(net.ljcomputing.entity.PersistedEntity)
    */
   @Override
-  public T create(T entity) {
+  public T createOrUpdate(T entity) {
     return repository.save(entity);
   }
 
@@ -58,14 +58,6 @@ public abstract class AbstractEntityService<T extends PersistedEntity, R extends
   @Override
   public T readById(Long id) {
     return repository.findOne(id);
-  }
-
-  /**
-   * @see net.ljcomputing.service.EntityService#update(net.ljcomputing.entity.PersistedEntity)
-   */
-  @Override
-  public T update(T entity) {
-    return repository.save(entity);
   }
 
   /**
