@@ -1,9 +1,8 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
+README for module net.ljcomputing.jpa-entity
+============================================
 
-README for module ${artifactId}
-===============================
+LJ Computing - JPA Entity Project
+-------------------------------------------------
 
-This module belongs to the project ${rootArtifactId}
+A base implementation of Spring JPA.
 
