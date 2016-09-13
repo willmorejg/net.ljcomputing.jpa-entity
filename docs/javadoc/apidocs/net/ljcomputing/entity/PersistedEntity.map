@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../repository/BaseCrudRepository.html" title="net.ljcomputing.repository.BaseCrudRepository" alt="" coords="61,225,463,279"/>
+<area shape="rect" id="node1" href="../repository/BaseCrudRepository.html" title="&lt;TABLE&gt;" alt="" coords="51,219,473,285"/>
+<area shape="rect" id="node3_1" href="./PersistedEntity.html" title="net.ljcomputing.entity.PersistedEntity" alt="" coords="336,339,436,381"/>
+<area shape="rect" id="node3" href="./PersistedEntity.html" title="&lt;TABLE&gt;" alt="" coords="325,334,447,386"/>
+<area shape="rect" id="node2_2" href="./AbstractPersistedEntity.html" title="net.ljcomputing.entity.AbstractPersistedEntity" alt="" coords="314,446,458,471"/>
+<area shape="rect" id="node2" href="./AbstractPersistedEntity.html" title="&lt;TABLE&gt;" alt="" coords="303,435,469,483"/>
+<area shape="rect" id="node4_3" href="../service/AbstractEntityService.html" title="net.ljcomputing.service.AbstractEntityService" alt="" coords="61,126,807,165"/>
+<area shape="rect" id="node4" href="../service/AbstractEntityService.html" title="&lt;TABLE&gt;" alt="" coords="51,121,817,170"/>
+<area shape="rect" id="node5_4" href="../service/EntityService.html" title="net.ljcomputing.service.EntityService" alt="" coords="44,11,403,66"/>
+<area shape="rect" id="node5" href="../service/EntityService.html" title="&lt;TABLE&gt;" alt="" coords="33,6,413,71"/>
+<area shape="rect" id="node6_5" href="../aspect/CreateEntityAspect.html" title="net.ljcomputing.aspect.CreateEntityAspect" alt="" coords="559,233,682,271"/>
+<area shape="rect" id="node6" href="../aspect/CreateEntityAspect.html" title="&lt;TABLE&gt;" alt="" coords="549,227,693,277"/>
+</map>

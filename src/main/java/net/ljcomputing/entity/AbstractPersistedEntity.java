@@ -75,7 +75,7 @@ public abstract class AbstractPersistedEntity implements PersistedEntity {
   }
 
   /**
-   * @see net.ljcomputing.entity.Domain#getUuid()
+   * @see net.ljcomputing.entity.PersistedEntity#getUuid()
    */
   @Override
   public String getUuid() {
@@ -83,7 +83,7 @@ public abstract class AbstractPersistedEntity implements PersistedEntity {
   }
 
   /**
-   * @see net.ljcomputing.entity.Domain#setUuid(java.lang.String)
+   * @see net.ljcomputing.entity.PersistedEntity#setUuid(java.lang.String)
    */
   @Override
   public void setUuid(final String uuid) {
@@ -91,7 +91,7 @@ public abstract class AbstractPersistedEntity implements PersistedEntity {
   }
 
   /**
-   * @see net.ljcomputing.entity.Domain#createUuid()
+   * @see net.ljcomputing.entity.PersistedEntity#createUuid()
    */
   @Override
   public void createUuid() {

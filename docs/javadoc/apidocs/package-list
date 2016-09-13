@@ -1,0 +1,5 @@
+net.ljcomputing.aspect
+net.ljcomputing.config
+net.ljcomputing.entity
+net.ljcomputing.repository
+net.ljcomputing.service

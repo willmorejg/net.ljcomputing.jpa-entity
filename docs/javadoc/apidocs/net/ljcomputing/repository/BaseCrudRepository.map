@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./BaseCrudRepository.html" title="net.ljcomputing.repository.BaseCrudRepository" alt="" coords="398,126,682,167"/>
+<area shape="rect" id="node1" href="./BaseCrudRepository.html" title="&lt;TABLE&gt;" alt="" coords="387,121,693,173"/>
+<area shape="rect" id="node2_1" href="../entity/PersistedEntity.html" title="net.ljcomputing.entity.PersistedEntity" alt="" coords="581,227,689,282"/>
+<area shape="rect" id="node2" href="../entity/PersistedEntity.html" title="&lt;TABLE&gt;" alt="" coords="570,222,699,287"/>
+<area shape="rect" id="node3_2" href="../service/AbstractEntityService.html" title="net.ljcomputing.service.AbstractEntityService" alt="" coords="358,19,1103,58"/>
+<area shape="rect" id="node3" href="../service/AbstractEntityService.html" title="&lt;TABLE&gt;" alt="" coords="347,14,1114,63"/>
+<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="5,6,323,71"/>
+</map>
