@@ -121,7 +121,7 @@ public class PersistenceConfiguration {
         url, username);
 
     try {
-      return new HikariDataSource(hikariConfig());
+      return new HikariDataSource(hikariConfig()); //NOPMD
     } catch (SQLException exception) {
       LOGGER.error("Could not create data source:", exception);
     }
@@ -137,8 +137,8 @@ public class PersistenceConfiguration {
    */
   private String getDriverClassName() throws SQLException {
     final Driver driver = DriverManager.getDriver(url);
-    final Class<?> driverClass = driver.getClass();
-    return driverClass.getName();
+    final Class<?> driverClass = driver.getClass(); //NOPMD
+    return driverClass.getName(); //NOPMD
   }
 
   /**

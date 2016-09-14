@@ -19,7 +19,6 @@ package net.ljcomputing.repository;
 import org.springframework.stereotype.Repository;
 
 import net.ljcomputing.entity.Person;
-import net.ljcomputing.repository.BaseCrudRepository;
 
 /**
  * Person JPA CRUD repository.

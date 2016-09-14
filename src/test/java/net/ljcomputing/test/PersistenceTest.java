@@ -45,11 +45,13 @@ import net.ljcomputing.service.PersonService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 @Import(PersistenceConfiguration.class)
+@SuppressWarnings("PMD.AtLeastOneConstructor")
 public class PersistenceTest {
 
   /** The SLF4J Logger. */
   private static final Logger LOGGER = LoggerFactory.getLogger(PersistenceTest.class);
   
+  /** The person service. */
   @Autowired
   private transient PersonService personService;
 

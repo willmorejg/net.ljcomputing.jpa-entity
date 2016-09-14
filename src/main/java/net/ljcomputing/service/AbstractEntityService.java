@@ -30,18 +30,20 @@ import net.ljcomputing.repository.BaseCrudRepository;
  * @param <T> the persisted entity
  * @param <R> the repository for the persisted entity
  */
+@SuppressWarnings({"PMD.AtLeastOneConstructor", "PMD.ShortVariable"})
 public abstract class AbstractEntityService<T extends PersistedEntity, R extends BaseCrudRepository<T>>
     implements EntityService<T> {
 
   /** The repository. */
   @Autowired
-  protected R repository;
+  protected transient R repository;
 
   /**
-   * @see net.ljcomputing.service.EntityService#createOrUpdate(net.ljcomputing.entity.PersistedEntity)
+   * @see net.ljcomputing.service.EntityService
+   *    #createOrUpdate(net.ljcomputing.entity.PersistedEntity)
    */
   @Override
-  public T createOrUpdate(T entity) {
+  public T createOrUpdate(final T entity) {
     return repository.save(entity);
   }
 
@@ -57,15 +59,16 @@ public abstract class AbstractEntityService<T extends PersistedEntity, R extends
    * @see net.ljcomputing.service.EntityService#readById(java.lang.Long)
    */
   @Override
-  public T readById(Long id) {
+  public T readById(final Long id) {
     return repository.findOne(id);
   }
 
   /**
-   * @see net.ljcomputing.service.EntityService#delete(net.ljcomputing.entity.PersistedEntity)
+   * @see net.ljcomputing.service.EntityService
+   *    #delete(net.ljcomputing.entity.PersistedEntity)
    */
   @Override
-  public void delete(T entity) {
+  public void delete(final T entity) {
     repository.delete(entity);
   }
 
