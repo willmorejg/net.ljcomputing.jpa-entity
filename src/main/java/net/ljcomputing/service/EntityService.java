@@ -27,7 +27,7 @@ import net.ljcomputing.entity.PersistedEntity;
  * @param <T> the PersitedEntity type
  */
 public interface EntityService<T extends PersistedEntity> {
-  
+
   /**
    * Creates the given entity.
    *
@@ -35,14 +35,14 @@ public interface EntityService<T extends PersistedEntity> {
    * @return the long
    */
   T createOrUpdate(T entity);
-  
+
   /**
    * Read all the entities of a given type.
    *
    * @return the list
    */
   List<T> readAll();
-  
+
   /**
    * Read an entity by id.
    *
@@ -50,7 +50,7 @@ public interface EntityService<T extends PersistedEntity> {
    * @return the t
    */
   T readById(Long id);
-  
+
   /**
    * Delete the given etity.
    *

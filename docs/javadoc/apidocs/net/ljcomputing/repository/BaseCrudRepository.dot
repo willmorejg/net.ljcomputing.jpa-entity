@@ -35,10 +35,10 @@ digraph G {
 	c75:p -> c66:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.repository.BaseCrudRepository<T extends net.ljcomputing.entity.PersistedEntity> DEPEND net.ljcomputing.entity.PersistedEntity
 	c66:p -> c68:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.service.AbstractEntityService<T extends net.ljcomputing.entity.PersistedEntity, R extends net.ljcomputing.repository.BaseCrudRepository<T>> DEPEND net.ljcomputing.entity.PersistedEntity
-	c69:p -> c68:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.service.AbstractEntityService<T extends net.ljcomputing.entity.PersistedEntity, R extends net.ljcomputing.repository.BaseCrudRepository<T>> DEPEND net.ljcomputing.repository.BaseCrudRepository<T extends net.ljcomputing.entity.PersistedEntity>
 	c69:p -> c66:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.service.AbstractEntityService<T extends net.ljcomputing.entity.PersistedEntity, R extends net.ljcomputing.repository.BaseCrudRepository<T>> DEPEND net.ljcomputing.entity.PersistedEntity
+	c69:p -> c68:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// org.springframework.data.repository.CrudRepository<T, ID extends java.io.Serializable>
 	c75 [label=<<table title="org.springframework.data.repository.CrudRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

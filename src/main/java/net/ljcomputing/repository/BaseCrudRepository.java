@@ -23,9 +23,9 @@ import net.ljcomputing.entity.PersistedEntity;
 
 /**
  * Interface shared by all repositories.
- * 
- * @author James G. Willmore
  *
+ * @author James G. Willmore
+ * @param <T> the PersistedEntity type
  */
 @NoRepositoryBean
 public interface BaseCrudRepository<T extends PersistedEntity> extends CrudRepository<T, Long> {

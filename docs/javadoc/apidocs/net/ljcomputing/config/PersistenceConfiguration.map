@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./PersistenceConfiguration.html" title="net.ljcomputing.config.PersistenceConfiguration" alt="" coords="304,17,461,42"/>
-<area shape="rect" id="node1" href="./PersistenceConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="293,5,472,53"/>
-<area shape="rect" id="node2" href="null" title="&lt;TABLE&gt;" alt="" coords="5,110,259,159"/>
-<area shape="rect" id="node3" href="null" title="&lt;TABLE&gt;" alt="" coords="283,102,482,167"/>
-<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="507,110,621,159"/>
+<area shape="rect" id="node1_0" href="./PersistenceConfiguration.html" title="net.ljcomputing.config.PersistenceConfiguration" alt="" coords="165,17,323,42"/>
+<area shape="rect" id="node1" href="./PersistenceConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="155,5,333,53"/>
+<area shape="rect" id="node2" href="null" title="&lt;TABLE&gt;" alt="" coords="5,110,120,159"/>
+<area shape="rect" id="node3" href="null" title="&lt;TABLE&gt;" alt="" coords="145,102,343,167"/>
+<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="367,110,622,159"/>
 </map>

@@ -117,7 +117,8 @@ public class PersistenceConfiguration {
    */
   @Bean(destroyMethod = "close")
   public DataSource dataSource() {
-    LOGGER.debug("using the following configuration: url:[{}] username:[{}] password:[********]", url, username);
+    LOGGER.debug("using the following configuration: url:[{}] username:[{}] password:[********]",
+        url, username);
 
     try {
       return new HikariDataSource(hikariConfig());

@@ -30,8 +30,9 @@ import net.ljcomputing.repository.BaseCrudRepository;
  * @param <T> the persisted entity
  * @param <R> the repository for the persisted entity
  */
-public abstract class AbstractEntityService<T extends PersistedEntity, R extends BaseCrudRepository<T>> implements EntityService<T> {
-  
+public abstract class AbstractEntityService<T extends PersistedEntity, R extends BaseCrudRepository<T>>
+    implements EntityService<T> {
+
   /** The repository. */
   @Autowired
   protected R repository;

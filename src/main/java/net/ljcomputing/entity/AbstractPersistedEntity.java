@@ -42,19 +42,19 @@ public abstract class AbstractPersistedEntity implements PersistedEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "ID")
-  protected Long id;
+  private Long id;
 
   /** The uuid. */
   @Column(name = "UUID", nullable = false)
-  protected String uuid;
+  private String uuid;
 
   /** The created time stamp. */
   @Column(name = "CREATED_TS", nullable = false)
-  protected Long createdTs;
+  private Long createdTs;
 
   /** The modified time stamp. */
   @Column(name = "MODIFIED_TS", nullable = false)
-  protected Long modifiedTs;
+  private Long modifiedTs;
 
   /**
    * Gets the id.

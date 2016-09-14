@@ -23,9 +23,9 @@ import org.springframework.stereotype.Component;
 import net.ljcomputing.entity.PersistedEntity;
 
 /**
- * Aspect that modified the entity prior to insert. 
- * Attributes that are modified are the created and 
- * modified time stamps.
+ * Aspect that modified the entity prior to insert.
+ *  Attributes that are modified are the created and
+ *  modified time stamps.
  * 
  * @author James G. Willmore
  *
@@ -40,7 +40,8 @@ public class CreateEntityAspect {
    *
    * @param entity the entity
    */
-  @Before("within(net.ljcomputing.repository.BaseCrudRepository+) && execution(* save(..)) && args(entity)")
+  @Before("within(net.ljcomputing.repository.BaseCrudRepository+) &&"
+      + " execution(* save(..)) && args(entity)")
   public void createEntity(final PersistedEntity entity) {
     createUuid(entity);
     modifiedAt(entity);
