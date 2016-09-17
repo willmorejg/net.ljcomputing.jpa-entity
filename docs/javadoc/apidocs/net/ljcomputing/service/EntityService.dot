@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.entity.PersistedEntity
-	c85 [label=<<table title="net.ljcomputing.entity.PersistedEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../entity/PersistedEntity.html">
+	c64 [label=<<table title="net.ljcomputing.entity.PersistedEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../entity/PersistedEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PersistedEntity </td></tr>
@@ -18,23 +18,23 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../entity/PersistedEntity.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.service.AbstractEntityService<T extends net.ljcomputing.entity.PersistedEntity, R extends net.ljcomputing.repository.BaseCrudRepository<T>>
-	c86 [label=<<table title="net.ljcomputing.service.AbstractEntityService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractEntityService.html">
+	c65 [label=<<table title="net.ljcomputing.service.AbstractEntityService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractEntityService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractEntityService&lt;T extends PersistedEntity, R extends BaseCrudRepository&lt;T&gt;&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractEntityService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.service.EntityService<T extends net.ljcomputing.entity.PersistedEntity>
-	c87 [label=<<table title="net.ljcomputing.service.EntityService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EntityService.html">
+	c66 [label=<<table title="net.ljcomputing.service.EntityService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EntityService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EntityService&lt;T extends PersistedEntity&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EntityService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.service.AbstractEntityService<T extends net.ljcomputing.entity.PersistedEntity, R extends net.ljcomputing.repository.BaseCrudRepository<T>> implements net.ljcomputing.service.EntityService<T extends net.ljcomputing.entity.PersistedEntity>
-	c87:p -> c86:p [dir=back,arrowtail=empty,style=dashed];
+	c66:p -> c65:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.service.AbstractEntityService<T extends net.ljcomputing.entity.PersistedEntity, R extends net.ljcomputing.repository.BaseCrudRepository<T>> DEPEND net.ljcomputing.entity.PersistedEntity
-	c86:p -> c85:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c65:p -> c64:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.service.EntityService<T extends net.ljcomputing.entity.PersistedEntity> DEPEND net.ljcomputing.entity.PersistedEntity
-	c87:p -> c85:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c66:p -> c64:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

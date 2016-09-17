@@ -37,7 +37,7 @@ import net.ljcomputing.entity.Person;
 import net.ljcomputing.service.PersonService;
 
 /**
- * Person mapper test.
+ * Persistence test.
  * 
  * @author James G. Willmore
  *
@@ -61,7 +61,7 @@ public class PersistenceTest {
   @Test
   @Transactional
   public void test() {
-    final List<Person> people = (List<Person>) personService.readAll();
+    List<Person> people = personService.readAll();
     LOGGER.debug("people: {}", people);
 
     final Person person = new Person();
@@ -71,8 +71,10 @@ public class PersistenceTest {
     personService.createOrUpdate(person);
 
     validatePerson(person);
+    
+    people = personService.readAll();
 
-    for (final Person p : personService.readAll()) {
+    for (final Person p : people) {
       LOGGER.debug("-- person {}", p);
       p.setName("JOE");
       LOGGER.debug("-- NEW person {}", p);
