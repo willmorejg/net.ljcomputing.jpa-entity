@@ -32,7 +32,6 @@ import net.ljcomputing.entity.PersistedEntity;
  */
 @Aspect
 @Component
-@SuppressWarnings("PMD.AtLeastOneConstructor")
 public class CreateEntityAspect {
 
   /**

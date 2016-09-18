@@ -32,7 +32,6 @@ import javax.persistence.MappedSuperclass;
  *
  */
 @MappedSuperclass
-@SuppressWarnings({"PMD.AtLeastOneConstructor", "PMD.ShortVariable"})
 public abstract class AbstractPersistedEntity implements PersistedEntity {
 
   /** The Constant serialVersionUID. */
@@ -61,6 +60,7 @@ public abstract class AbstractPersistedEntity implements PersistedEntity {
    *
    * @return the id
    */
+  @Override
   public Long getId() {
     return id;
   }
@@ -70,6 +70,7 @@ public abstract class AbstractPersistedEntity implements PersistedEntity {
    *
    * @param id the new id
    */
+  @Override
   public void setId(final Long id) { //NOPMD
     this.id = id;
   }

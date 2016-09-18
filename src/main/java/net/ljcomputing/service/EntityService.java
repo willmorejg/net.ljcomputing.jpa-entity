@@ -26,7 +26,6 @@ import net.ljcomputing.entity.PersistedEntity;
  * @author James G. Willmore
  * @param <T> the PersitedEntity type
  */
-@SuppressWarnings("PMD.ShortVariable")
 public interface EntityService<T extends PersistedEntity> {
 
   /**

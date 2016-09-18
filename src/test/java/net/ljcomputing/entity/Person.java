@@ -31,7 +31,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "PERSON")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@SuppressWarnings("PMD.AtLeastOneConstructor")
 public class Person extends AbstractPersistedEntity implements PersistedEntity {
 
   /** The Constant serialVersionUID. */

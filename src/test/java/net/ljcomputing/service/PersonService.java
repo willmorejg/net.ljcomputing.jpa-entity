@@ -31,7 +31,7 @@ import net.ljcomputing.repository.PersonRepository;
  */
 @Service
 @Transactional
-@SuppressWarnings("PMD.AtLeastOneConstructor")
-public class PersonService extends AbstractEntityService<Person, PersonRepository> {
+public class PersonService 
+    extends AbstractEntityService<Person, PersonRepository> {
 
 }

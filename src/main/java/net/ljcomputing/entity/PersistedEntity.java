@@ -25,7 +25,6 @@ import java.io.Serializable;
  * @author James G. Willmore
  *
  */
-@SuppressWarnings("PMD.ShortVariable")
 public interface PersistedEntity extends Serializable {
 
   /**

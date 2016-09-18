@@ -30,7 +30,6 @@ import net.ljcomputing.repository.BaseCrudRepository;
  * @param <T> the persisted entity
  * @param <R> the repository for the persisted entity
  */
-@SuppressWarnings({"PMD.AtLeastOneConstructor", "PMD.ShortVariable"})
 public abstract class AbstractEntityService<T extends PersistedEntity, R extends BaseCrudRepository<T>>
     implements EntityService<T> {
 

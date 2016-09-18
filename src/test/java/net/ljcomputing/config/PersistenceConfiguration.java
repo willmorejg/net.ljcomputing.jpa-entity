@@ -58,7 +58,6 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableJpaRepositories(basePackages = { "net.ljcomputing.repository" })
 @EntityScan({ "net.ljcomputing.entity" })
 @EnableTransactionManagement
-@SuppressWarnings("PMD.AtLeastOneConstructor")
 public class PersistenceConfiguration {
 
   /** The SLF4J Logger. */
@@ -152,17 +151,24 @@ public class PersistenceConfiguration {
     final HikariConfig hikariConfig = new HikariConfig();
 
     initConnectionPool(hikariConfig);
+    addPoolProperties(hikariConfig);
+    addAdditionalPoolProperties(hikariConfig);
 
+    return hikariConfig;
+  }
+
+  /**
+   * Adds the pool properties.
+   *
+   * @param hikariConfig the hikari config
+   */
+  private void addPoolProperties(final HikariConfig hikariConfig) {
     hikariConfig.setPoolName(poolName);
     hikariConfig.setMaximumPoolSize(maximumPoolSize);
     hikariConfig.setMinimumIdle(minimumIdle);
     hikariConfig.setMaxLifetime(maxLifetime);
     hikariConfig.setConnectionTimeout(connectionTimeout);
     hikariConfig.setIdleTimeout(idleTimeout);
-
-    addAdditionalPoolProperties(hikariConfig);
-
-    return hikariConfig;
   }
 
   /**
